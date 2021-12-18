@@ -1,13 +1,12 @@
 package ru.skypro;
 
 public class Author {
-    String firstName;
-    String secondName;
+    private final String firstName;
+    private final String secondName;
 
     public Author(String firstName, String secondName) {
         this.firstName = firstName;
         this.secondName = secondName;
-
     }
 
     public String getFirstName() {
@@ -16,5 +15,9 @@ public class Author {
 
     public String getSecondName() {
         return this.secondName;
+    }
+
+    public String getAuthorFullName() {
+        return this.firstName + " " + this.secondName;
     }
 }

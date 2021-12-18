@@ -1,9 +1,8 @@
 package ru.skypro;
 
 public class Book{
-    Author author;
-//    private Object Author;
-    private String bookName;
+    private final Author author;
+    private final String bookName;
     private int releaseOfYear;
 
 
@@ -18,7 +17,7 @@ public class Book{
     }
 
     public Author getAuthor() {
-        return this.getAuthor();
+        return this.author;
     }
 
     public int getReleaseOfYear() {
@@ -27,5 +26,9 @@ public class Book{
 
     public void setReleaseOfYear(int releaseOfYear) {
         this.releaseOfYear = releaseOfYear;
+    }
+
+    public String getBookFullInfo() {
+        return this.bookName + " " + author.getAuthorFullName() + " " + this.releaseOfYear;
     }
 }
